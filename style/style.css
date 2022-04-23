@@ -1,10 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+html{
+   scroll-behavior: smooth;
+}
 body {
     font-family: 'Quicksand',sans-serif;
-    margin: auto;
-    padding-left: 5s0px;
+    margin: 0;
+    padding: 0;
  }
-  
+ *{
+    box-sizing: border-box;
+ }
+ main{
+    padding: 20px;
+    overflow: auto;
+ }
+
+  #content{
+     float: left;
+     width: 75%;
+  }
+  aside {
+     float: right;
+     width: 25%;
+     padding-left: 20px;
+  }
  h2 {
     color: #00a2c6
  }
@@ -31,7 +50,7 @@ body {
  .profile header{
     text-align: center;
  }
- .profile image{
+ .image-p{
     width: 200px;
  }
  .card{
@@ -43,6 +62,11 @@ body {
  nav{
     background-color: #00a2c6;
     padding: 5px;
+    position: sticky;
+    top: 0;
+ }
+ header{
+    display: inline;
  }
  nav li{
     display: inline;
@@ -69,3 +93,12 @@ body {
     object-fit: cover;
     object-position: center;
  }
+
+  @media screen and (max-width: 900px) {
+     #content,aside {
+        width: 100%;
+        padding: 0;
+     }
+  }
+
+  /* @import url(https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap);html{scroll-behavior:smooth}body{font-family:Quicksand,sans-serif;margin:0;padding:0}*{box-sizing:border-box}main{padding:20px;overflow:auto}#content{float:left;width:75%}aside{float:right;width:25%;padding-left:20px}h2{color:#00a2c6}h3{color:#00a2c6}footer{padding:20px;color:#fff;background-color:#00a2c6;text-align:center;font-weight:700}nav a{font-size:18px;font-weight:400;text-decoration:none}nav a:hover{font-weight:700}.profile header{text-align:center}.image-p{width:200px}.card{box-shadow:0 4px 8px 0 rgba(0,0,0,.2);border-radius:5px;padding:20px;margin-top:20px}nav{background-color:#00a2c6;padding:5px;position:sticky;top:0}header{display:inline}nav li{display:inline;list-style-type:none;margin-right:20px}nav a{font-size:18px;font-weight:400;text-decoration:none;color:#fff}.jumbotron{font-size:20px;padding:60px;background-color:#00c8eb;text-align:center;color:#fff}.featured-image{width:100%;max-height:300px;object-fit:cover;object-position:center}@media screen and (max-width:900px){#content,aside{width:100%;padding:0}} */
